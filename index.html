@@ -25,6 +25,16 @@
             margin: 0 auto;
         }
 
+        .bingo-header {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            width: 80%;
+            margin: 10px auto;
+            font-weight: bold;
+            font-size: 1.5em;
+            color: #d2691e;
+        }
+
         .bingo-square {
             padding: 20px;
             border-radius: 10px;
@@ -57,37 +67,46 @@
 </head>
 <body>
     <h1>What, Why, and How Bingo Board</h1>
+    <div class="bingo-header">
+        <div>B</div>
+        <div>I</div>
+        <div>N</div>
+        <div>G</div>
+        <div>O</div>
+    </div>
     <div class="bingo-board">
-        <div class="bingo-square what" onclick="markSquare(this)">What - AI Tool Demo</div>
-        <div class="bingo-square why" onclick="markSquare(this)">Why - Student Interest Survey</div>
-        <div class="bingo-square how" onclick="markSquare(this)">How - Try Kahoot/Quizziz</div>
-        <div class="bingo-square what" onclick="markSquare(this)">What - Create a Resource Folder</div>
-        <div class="bingo-square why" onclick="markSquare(this)">Why - Reflect on Challenges</div>
-        <div class="bingo-square how" onclick="markSquare(this)">How - Design a Lesson Using PBL</div>
-        <div class="bingo-square what" onclick="markSquare(this)">What - UDL Quick Overview</div>
-        <div class="bingo-square how" onclick="markSquare(this)">How - Partner to Create Padlet</div>
-        <div class="bingo-square why" onclick="markSquare(this)">Why - Connect to Real World</div>
-        <div class="bingo-square what" onclick="markSquare(this)">What - Jigsaw Activity Plan</div>
-        <div class="bingo-square why" onclick="markSquare(this)">Why - Link to Career Paths</div>
-        <div class="bingo-square" onclick="markSquare(this)">Free Space</div>
-        <div class="bingo-square how" onclick="markSquare(this)">How - Choose an Assessment Tool</div>
-        <div class="bingo-square what" onclick="markSquare(this)">What - List Differentiation Strategies</div>
-        <div class="bingo-square how" onclick="markSquare(this)">How - Create a Mini-Project Plan</div>
-        <div class="bingo-square what" onclick="markSquare(this)">What - Explore Gallery Walks</div>
-        <div class="bingo-square why" onclick="markSquare(this)">Why - Discuss Student Motivation</div>
-        <div class="bingo-square how" onclick="markSquare(this)">How - Use Canva for a Task</div>
-        <div class="bingo-square why" onclick="markSquare(this)">Why - Identify Learning Barriers</div>
-        <div class="bingo-square what" onclick="markSquare(this)">What - Explain Tiered Activities</div>
-        <div class="bingo-square how" onclick="markSquare(this)">How - Flipgrid/Flip Reflection</div>
-        <div class="bingo-square why" onclick="markSquare(this)">Why - Define Success Criteria</div>
-        <div class="bingo-square how" onclick="markSquare(this)">How - Design a Choice Bingo</div>
-        <div class="bingo-square what" onclick="markSquare(this)">What - Protocol for Gamification</div>
+        <div class="bingo-square what" onclick="toggleSquare(this)">What - AI Tool Demo</div>
+        <div class="bingo-square why" onclick="toggleSquare(this)">Why - Student Interest Survey</div>
+        <div class="bingo-square how" onclick="toggleSquare(this)">How - Try Kahoot/Quizziz</div>
+        <div class="bingo-square what" onclick="toggleSquare(this)">What - Create a Resource Folder</div>
+        <div class="bingo-square why" onclick="toggleSquare(this)">Why - Reflect on Challenges</div>
+        <div class="bingo-square how" onclick="toggleSquare(this)">How - Design a Lesson Using PBL</div>
+        <div class="bingo-square what" onclick="toggleSquare(this)">What - UDL Quick Overview</div>
+        <div class="bingo-square how" onclick="toggleSquare(this)">How - Partner to Create Padlet</div>
+        <div class="bingo-square why" onclick="toggleSquare(this)">Why - Connect to Real World</div>
+        <div class="bingo-square what" onclick="toggleSquare(this)">What - Jigsaw Activity Plan</div>
+        <div class="bingo-square why" onclick="toggleSquare(this)">Why - Link to Career Paths</div>
+        <div class="bingo-square" onclick="toggleSquare(this)">Free Space</div>
+        <div class="bingo-square how" onclick="toggleSquare(this)">How - Choose an Assessment Tool</div>
+        <div class="bingo-square what" onclick="toggleSquare(this)">What - List Differentiation Strategies</div>
+        <div class="bingo-square how" onclick="toggleSquare(this)">How - Create a Mini-Project Plan</div>
+        <div class="bingo-square what" onclick="toggleSquare(this)">What - Explore Gallery Walks</div>
+        <div class="bingo-square why" onclick="toggleSquare(this)">Why - Discuss Student Motivation</div>
+        <div class="bingo-square how" onclick="toggleSquare(this)">How - Use Canva for a Task</div>
+        <div class="bingo-square why" onclick="toggleSquare(this)">Why - Identify Learning Barriers</div>
+        <div class="bingo-square what" onclick="toggleSquare(this)">What - Explain Tiered Activities</div>
+        <div class="bingo-square how" onclick="toggleSquare(this)">How - Flipgrid/Flip Reflection</div>
+        <div class="bingo-square why" onclick="toggleSquare(this)">Why - Define Success Criteria</div>
+        <div class="bingo-square how" onclick="toggleSquare(this)">How - Design a Choice Bingo</div>
+        <div class="bingo-square what" onclick="toggleSquare(this)">What - Protocol for Gamification</div>
+        <div class="bingo-square how" onclick="toggleSquare(this)">How - Final Reflection Activity</div>
     </div>
 
     <script>
-        function markSquare(square) {
-            square.classList.add('clicked');
+        function toggleSquare(square) {
+            square.classList.toggle('clicked');
         }
     </script>
 </body>
 </html>
+
